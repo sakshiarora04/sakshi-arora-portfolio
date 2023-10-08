@@ -7,8 +7,7 @@ import { Image } from '@chakra-ui/image';
 export default function AboutPage() {
   
   return (
-    <Stack>
-          
+    <Stack>          
             <Flex direction={"row"}
             bg="back.700"
             wrap="wrap"
@@ -25,7 +24,7 @@ export default function AboutPage() {
                     }>Contact me</Button>
 
                 </Box>
-                <Image  direction={"column"} ml={20} alignSelf="center" my={16} borderRadius='full'
+                <Image direction={"column"} ml={20} alignSelf="center" my={16} borderRadius='full'
                     backgroundColor="transparent" boxShadow="lg"
                     boxSize="300px" src='' />
             </Flex>

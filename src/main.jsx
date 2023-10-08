@@ -1,9 +1,7 @@
 import ReactDOM from "react-dom/client";
 // Bringing in the required imports from 'react-router-dom' to set up application routing behavior
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// //  import `ChakraProvider` component
-import { ChakraProvider} from "@chakra-ui/react";
-import {theme} from './styles/theme.jsx';
+
 import "./index.css";
 
 // Bringing in the pages the router will use to conditionally show the appropriate views
@@ -47,7 +45,7 @@ const router = createBrowserRouter([
 
 // Render the RouterProvider component
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ChakraProvider theme={theme}>
+ 
     <RouterProvider router={router} />
-  </ChakraProvider>
+ 
 );

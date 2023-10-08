@@ -1,15 +1,38 @@
-import { IconButton } from '@chakra-ui/react'
-import {  FaGithub, FaLinkedin } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { IconButton, Flex, Stack, ButtonGroup, Text } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-    const guthubLink = () => {
-        <Link to ='/https://github.com/sakshiarora04/sakshi-arora-portfolio' ></Link>
-    }
-    return ( <div>
-        <IconButton ml={2} icon={<FaGithub />} isRound='true' onClick={guthubLink}></IconButton>
-    <IconButton ml={2} icon={<FaLinkedin />} isRound='true' onClick={guthubLink}></IconButton>
-    </div>
-    
-    )
+  const guthubLink = () => {
+    <Link to="/https://github.com/sakshiarora04/sakshi-arora-portfolio"></Link>;
+  };
+  return (
+    <Flex bg="back.900" as="footer" >
+      <Stack spacing={{ base: "4", md: "5" }}>
+        <Stack justify="space-between" direction="row" align="center">
+          <ButtonGroup variant="tertiary">
+            <IconButton
+              as=""
+              href="#"
+              aria-label="LinkedIn"
+              icon={<FaLinkedin />}
+            />
+            <IconButton
+              as=""
+              href="#"
+              aria-label="GitHub"
+              icon={<FaGithub />}
+            />
+            <IconButton
+              as="a"
+             
+              aria-label="Twitter"
+              icon={<FaTwitter />}
+              onClick={guthubLink}
+            />
+          </ButtonGroup>
+        </Stack>
+      </Stack>
+    </Flex>
+  );
 }

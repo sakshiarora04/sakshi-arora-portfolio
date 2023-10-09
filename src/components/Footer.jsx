@@ -14,19 +14,21 @@ export default function Footer() {
             <IconButton
             
               as=""
+              fontSize='30px'
               href="#"
               aria-label="LinkedIn"
               icon={<FaLinkedin />}
             />
             <IconButton
               as=""
+              fontSize='30px'
               href="#"
               aria-label="GitHub"
               icon={<FaGithub />}
             />
             <IconButton
               as="a"
-             
+              fontSize='30px'
               aria-label="Twitter"
               icon={<FaTwitter />}
               onClick={guthubLink}

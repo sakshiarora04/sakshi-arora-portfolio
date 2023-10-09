@@ -2,7 +2,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Flex, Stack, Spacer } from "@chakra-ui/layout";
+import { Stack, } from "@chakra-ui/layout";
 // //  import `ChakraProvider` component
 import { ChakraProvider, GridItem } from "@chakra-ui/react";
 import { theme } from "./styles/theme.jsx";
@@ -14,7 +14,7 @@ function App() {
       <Stack  w="100%" minHeight="100vh">
         <Header />
         
-        <GridItem bg="back.900" area={"main"} h="auto" >
+        <GridItem area={"main"}  >
           <Outlet />
         </GridItem>
 

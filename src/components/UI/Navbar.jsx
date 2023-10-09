@@ -18,7 +18,7 @@ export default function Nav({ links }) {
   return (
     <>
       <Flex
-        bg={useColorModeValue("gray.100", "gray.900")}
+        bg={useColorModeValue("back.100", "back.900")}
         wrap="wrap"
         padding="1.5rem"
         zIndex="sticky"
@@ -56,7 +56,7 @@ export default function Nav({ links }) {
           width={{ base: "full", md: "auto" }}
           px={20}
           alignItems="center"
-          flexGrow={1}
+          
         >
           {links.map((link, i) => (
             <Button key={i} mt={{ base: 6, md: 0 }} mr={6} display="block">

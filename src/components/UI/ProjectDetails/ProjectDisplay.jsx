@@ -1,6 +1,5 @@
 import {
   GridItem,
-  Box,
   Stack,
   Text,
   Link,
@@ -18,7 +17,7 @@ export default function ProjectDisplay({
   project: { title, image, description, deploy, github },
 }) {
   return (
-    <GridItem bg="back.800" overflowY="auto" >
+    <GridItem bg="back.800" overflowY="auto">
       <Card maxW="sm" w="500">
         <CardBody>
           <Image
@@ -30,20 +29,17 @@ export default function ProjectDisplay({
           />
           <Stack mt="6" spacing="3" h="200">
             <Heading size="md">{title}</Heading>
-            <Text>
-              {description}
-            </Text>
-            
+            <Text>{description}</Text>
           </Stack>
         </CardBody>
         <Divider />
         <CardFooter>
           <ButtonGroup spacing="2">
-            <Button variant="solid"  colorScheme="blue">
-            <Link href= {deploy}>Live</Link>          
+            <Button variant="solid" colorScheme="blue">
+              <Link href={deploy}>Live</Link>
             </Button>
             <Button variant="solid" colorScheme="blue">
-            <Link href= {github}>Github</Link>     
+              <Link href={github}>Github</Link>
             </Button>
           </ButtonGroup>
         </CardFooter>

@@ -11,14 +11,18 @@ import {
 import { useState } from "react";
 import { validateEmail } from "../utils/helpers";
 export default function ContactPage() {
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInput = (e) => {
     const type = e.target.name;
     const value = e.target.value;
-  
-    if (type === "email" || type === "name" || type === "message" ) {
+
+    if (type === "email" || type === "name" || type === "message") {
       setFormState({ ...formState, [type]: value });
     }
   };
@@ -30,10 +34,8 @@ export default function ContactPage() {
 
     if (type === "name" && !value) {
       setErrorMessage("Please enter name");
-    } else if (type === "email" && !value) {
-      if (!validateEmail(value)) {
-        setErrorMessage("Please enter valid email address");
-      }
+    } else if (type === "email" && !validateEmail(value)) {
+      setErrorMessage("Please enter valid email address");
     } else if (type === "message" && !value) {
       setErrorMessage("Message is required");
     } else {
@@ -42,14 +44,13 @@ export default function ContactPage() {
   };
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!errorMessage){
-      console.log("submitted successfully",formState)
-    }
-    else{
+    if (!errorMessage) {
+      console.log("submitted successfully", formState);
+      setFormState({ name: "", email: "", message: "" });
+    } else {
       setErrorMessage("Please enter required fields");
-    }   
-    setFormState({ name: '', email: '', message: ''  })
-    
+    }
+   
   };
 
   return (
@@ -76,7 +77,6 @@ export default function ContactPage() {
                   onChange={handleInput}
                   onBlur={handleInputOnFocusOut}
                   placeholder="John Doe"
-             
                 />
                 <FormLabel mt={6}>Email:</FormLabel>
                 <Input
@@ -86,7 +86,6 @@ export default function ContactPage() {
                   onChange={handleInput}
                   onBlur={handleInputOnFocusOut}
                   placeholder="test@test.com"
-                  
                 />
                 <FormLabel mt={6}>Message:</FormLabel>
                 <Input
@@ -96,7 +95,6 @@ export default function ContactPage() {
                   onChange={handleInput}
                   onBlur={handleInputOnFocusOut}
                   placeholder=""
-                 
                 />
               </FormControl>
               <FormControl mt={6}>

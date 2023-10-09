@@ -64,7 +64,7 @@ export default function ContactPage() {
       <Flex width="auto" align="center" justifyContent="center">
         <Box p={2}>
           <Box textAlign="center">
-            <Heading>Contact</Heading>
+            <Heading>Contact Me</Heading>
           </Box>
           <Box my={4} w={[200, 300, 400]} textAlign="left">
             <form className="form"  onSubmit={handleFormSubmit}>

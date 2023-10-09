@@ -38,7 +38,7 @@ export default function Nav({ links }) {
           >
             SA
           </Heading>
-        </Flex>
+        
         <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
           <svg
             fill="white"
@@ -64,7 +64,8 @@ export default function Nav({ links }) {
             </Button>
           ))}
         </Box>
-        <Button onClick={toggleColorMode}>
+        </Flex>
+        <Button onClick={toggleColorMode}  variant="ghost">
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>

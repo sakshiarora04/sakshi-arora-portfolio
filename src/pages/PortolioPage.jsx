@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Grid } from "@chakra-ui/react";
 // Bringing in the required component from 'react-router-dom' for linking between pages and getting the current param variable's value from URL
-// import { useParams, Link } from 'react-router-dom';
+
 import ProjectDisplay from "../components/UI/ProjectDetails/ProjectDisplay";
 import ProjectList from "../components/UI/ProjectDetails/ProjectList";
 export default function ProfilePage() {
@@ -9,8 +9,7 @@ export default function ProfilePage() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setProjects(ProjectList());
-    console.log(projects);
+    setProjects(ProjectList());   
   }, []);
 
   return (

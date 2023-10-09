@@ -11,29 +11,30 @@ import {
 } from "@chakra-ui/react";
 import { BsCloudDownloadFill } from "react-icons/bs";
 import resume from "../../public/assets/resume/SAKSHI_ARORA_Resume.pdf";
-// import {frontEndSkills, backEndSkills} from '../components/UI/SkillSet'
+// import {frontEndSkills} from '../components/UI/SkillSet';
+// import {backEndSkills} from '../components/UI/SkillSet';
 export default function ResumePage() {
-  const frontEndSkills = [
-    "CSS",
-    "JavaScript",
-    "JQuery",
-    "Responsive Design",
-    "React",
-    "Bootstrap",
-    "Chakra UI",
-  ];
-  const backEndSkills = [
-    "API's",
-    "Node",
-    "Express",
-    "MySQL",
-    "Sequelize",
-    "MongoDB",
-    "Mongoose",
-    "Bootstrap",
-    "REST",
-    "GraphQL",
-  ];
+    const frontEndSkills = [
+        "CSS",
+        "JavaScript",
+        "JQuery",
+        "Responsive Design",
+        "React",
+        "Bootstrap",
+        "Chakra UI",
+    ];
+    const backEndSkills = [
+        "API's",
+        "Node",
+        "Express",
+        "MySQL",
+        "Sequelize",
+        "MongoDB",
+        "Mongoose",
+        "Bootstrap",
+        "REST",
+        "GraphQL",
+    ];
   return (
     <Grid
       templateColumns={{
@@ -72,6 +73,7 @@ export default function ResumePage() {
         <Card maxW="sm" w="500" h="350">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Back-end Proficiencies</CardHeader>
           <CardBody><UnorderedList>
+            console.log({backEndSkills})
               {backEndSkills.map((skill, i) => (
                 <ListItem key={i} >{skill}</ListItem>
               ))}

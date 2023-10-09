@@ -20,6 +20,6 @@ export default function SkillSet() {
     "REST",
     "GraphQL",
   ];
-  return { frontEndSkills, backEndSkills };
+  return  backEndSkills ;
 }
  

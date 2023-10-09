@@ -17,8 +17,8 @@ export default function ProjectDisplay({
   project: { title, image, description, deploy, github },
 }) {
   return (
-    <GridItem bg="back.800" overflowY="auto">
-      <Card maxW="sm" w="500">
+    <GridItem bg="back.800" mb={10} overflowY="auto">
+      <Card maxW="sm" w="500" >
         <CardBody>
           <Image
             src={image}
@@ -27,7 +27,7 @@ export default function ProjectDisplay({
             borderRadius="lg"
             boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px;"
           />
-          <Stack mt="6" spacing="3" h="200">
+          <Stack mt="6" spacing="3" h="170">
             <Heading size="md">{title}</Heading>
             <Text>{description}</Text>
           </Stack>

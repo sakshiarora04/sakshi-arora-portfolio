@@ -18,7 +18,7 @@ export default function ProjectDisplay({
   project: { title, image, description, deploy, github },
 }) {
   return (
-    <GridItem bg="back.800" mb={10} overflowY="auto">
+    <GridItem mb={10} overflowY="auto">
       <Card maxW="sm" w="500">
         <CardBody>
           <Image

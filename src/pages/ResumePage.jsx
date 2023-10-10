@@ -48,7 +48,7 @@ export default function ResumePage() {
       mx={20}
     >
       {/* download resume button */}
-      <GridItem bg="back.800" mb={10} overflowY="auto">
+      <GridItem mb={10} overflowY="auto">
         <a href={resume} download="sakshi_arora.pdf">
         <Button variant="solid" colorScheme="blue" m={10}>
           
@@ -63,7 +63,7 @@ export default function ResumePage() {
         <p>Please feel free to check out my list of Developer Proficiencies!</p>
       </GridItem>
       {/* list frontend and backend Proficiencies */}
-      <GridItem bg="back.800" mb={10} overflowY="auto">
+      <GridItem mb={10} overflowY="auto">
         <Card maxW="sm" w="500" h="380">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Front-end Proficiencies</CardHeader>
           <CardBody>
@@ -75,7 +75,7 @@ export default function ResumePage() {
           </CardBody>
         </Card>
       </GridItem>
-      <GridItem bg="back.800" mb={10} overflowY="auto">
+      <GridItem mb={10} overflowY="auto">
         <Card maxW="sm" w="500" h="380">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Back-end Proficiencies</CardHeader>
           <CardBody><UnorderedList>

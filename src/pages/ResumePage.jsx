@@ -2,7 +2,6 @@ import {
   Grid,
   GridItem,
   Button,
-  Link,
   Card,
   CardHeader,
   CardBody,
@@ -15,27 +14,27 @@ import resume from "/assets/resume/SAKSHI_ARORA_Resume.pdf";
 
 export default function ResumePage() {
   // skill set
-    const frontEndSkills = [
-        "CSS",
-        "JavaScript",
-        "JQuery",
-        "Responsive Design",
-        "React",
-        "Bootstrap",
-        "Chakra UI",
-    ];
-    const backEndSkills = [
-        "API's",
-        "Node",
-        "Express",
-        "MySQL",
-        "Sequelize",
-        "MongoDB",
-        "Mongoose",
-        "Bootstrap",
-        "REST",
-        "GraphQL",
-    ];
+  const frontEndSkills = [
+    "CSS",
+    "JavaScript",
+    "JQuery",
+    "Responsive Design",
+    "React",
+    "Bootstrap",
+    "Chakra UI",
+  ];
+  const backEndSkills = [
+    "API's",
+    "Node",
+    "Express",
+    "MySQL",
+    "Sequelize",
+    "MongoDB",
+    "Mongoose",
+    "Bootstrap",
+    "REST",
+    "GraphQL",
+  ];
   return (
     <Grid
       templateColumns={{
@@ -50,26 +49,24 @@ export default function ResumePage() {
       {/* download resume button */}
       <GridItem mb={10} overflowY="auto">
         <a href={resume} download="sakshi_arora.pdf">
-        <Button variant="solid" colorScheme="blue" m={10}>
-          
-            <BsCloudDownloadFill
-              style={{ margin:"20px", height: "20px" }}
-            />
+          <Button variant="solid" colorScheme="blue" m={10}>
+            <BsCloudDownloadFill style={{ margin: "20px", height: "20px" }} />
             Download my resume
-         
-        </Button>
+          </Button>
         </a>
-        
+
         <p>Please feel free to check out my list of Developer Proficiencies!</p>
       </GridItem>
       {/* list frontend and backend Proficiencies */}
       <GridItem mb={10} overflowY="auto">
         <Card maxW="sm" w="500" h="380">
-          <CardHeader fontWeight="bold" fontSize="1.5rem">Front-end Proficiencies</CardHeader>
+          <CardHeader fontWeight="bold" fontSize="1.5rem">
+            Front-end Proficiencies
+          </CardHeader>
           <CardBody>
             <UnorderedList>
               {frontEndSkills.map((skill, i) => (
-                <ListItem key={i} >{skill}</ListItem>
+                <ListItem key={i}>{skill}</ListItem>
               ))}
             </UnorderedList>
           </CardBody>
@@ -77,12 +74,16 @@ export default function ResumePage() {
       </GridItem>
       <GridItem mb={10} overflowY="auto">
         <Card maxW="sm" w="500" h="380">
-          <CardHeader fontWeight="bold" fontSize="1.5rem">Back-end Proficiencies</CardHeader>
-          <CardBody><UnorderedList>
+          <CardHeader fontWeight="bold" fontSize="1.5rem">
+            Back-end Proficiencies
+          </CardHeader>
+          <CardBody>
+            <UnorderedList>
               {backEndSkills.map((skill, i) => (
-                <ListItem key={i} >{skill}</ListItem>
+                <ListItem key={i}>{skill}</ListItem>
               ))}
-            </UnorderedList></CardBody>
+            </UnorderedList>
+          </CardBody>
         </Card>
       </GridItem>
     </Grid>

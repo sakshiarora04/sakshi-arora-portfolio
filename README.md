@@ -20,7 +20,11 @@ Check out the live demo of my portfolio [here](https://sakshi-arora-portfolio-71
 
 ### Preview
 
+- HomePage
 ![home.](./public/assets/images/about.jpg)
+
+- Demo Video
+![demo.](./public/assets/images/portfolio%20demo.gif)
 
 ## Installation 
 

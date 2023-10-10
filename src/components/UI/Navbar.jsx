@@ -66,7 +66,7 @@ export default function Nav({ links }) {
         </Box>
         </Flex>
         <Button onClick={toggleColorMode}  variant="ghost">
-          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          {colorMode === "dark" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>
     </>

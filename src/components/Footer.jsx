@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Flex as="footer" justify="center" height="50px" mt={20}>
+    <Flex as="footer" justify="center" height="50px">
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row" align="center">
           <ButtonGroup variant="tertiary">

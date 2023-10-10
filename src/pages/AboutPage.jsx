@@ -37,7 +37,7 @@ export default function AboutPage() {
           <Button
             mt={8}
             colorScheme="blue"
-            onClick={() => <Link href="/contact"></Link>}
+            onClick={() => window.open("./contact", "_blank")}
           >
             Contact me
           </Button>

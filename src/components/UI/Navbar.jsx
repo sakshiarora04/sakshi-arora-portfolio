@@ -13,7 +13,7 @@ export default function Nav({ links }) {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 
-  const [isActive, setisActive] = useState(false);
+  const [isActive, setisActive] = useState(0);
   const { colorMode, toggleColorMode } = useColorMode();
   const handleActive = (pageNo) => {
     setisActive(pageNo);
@@ -40,7 +40,7 @@ export default function Nav({ links }) {
             fontWeight="semibold"
             color="purple.600"
           >
-            SA
+            Sakshi Arora
           </Heading>
 
           <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>

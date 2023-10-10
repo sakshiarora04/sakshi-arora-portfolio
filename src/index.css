@@ -13,8 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-
+.feedback{
+  font-size:small;
+  font-style: italic;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

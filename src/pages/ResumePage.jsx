@@ -10,9 +10,8 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { BsCloudDownloadFill } from "react-icons/bs";
-import resume from "../../public/assets/resume/SAKSHI_ARORA_Resume.pdf";
-// import {frontEndSkills} from '../components/UI/SkillSet';
-// import {backEndSkills} from '../components/UI/SkillSet';
+import resume from "/assets/resume/SAKSHI_ARORA_Resume.pdf";
+
 export default function ResumePage() {
     const frontEndSkills = [
         "CSS",
@@ -73,7 +72,6 @@ export default function ResumePage() {
         <Card maxW="sm" w="500" h="350">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Back-end Proficiencies</CardHeader>
           <CardBody><UnorderedList>
-            console.log({backEndSkills})
               {backEndSkills.map((skill, i) => (
                 <ListItem key={i} >{skill}</ListItem>
               ))}

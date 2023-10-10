@@ -13,8 +13,12 @@ export default function Nav({ links }) {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 
+  const [isActive, setisActive] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const handleActive = (pageNo) => {
+    setisActive(pageNo);
+  };
+ 
   return (
     <>
       <Flex
@@ -32,40 +36,46 @@ export default function Nav({ links }) {
           <Heading
             w="100%"
             ml={6}
-            size="lg"            
+            size="lg"
             fontWeight="semibold"
             color="purple.600"
           >
             SA
           </Heading>
-        
-        <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
-          <svg
-            fill="white"
-            width="12px"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </Box>
 
-        <Box
-          display={{ base: show ? "block" : "none", md: "flex" }}
-          width={{ base: "full", md: "auto" }}
-          px={20}
-          alignItems="center"
-          
-        >
-          {links.map((link, i) => (
-            <Button key={i} mt={{ base: 6, md: 0 }} mr={6} display="block">
-              {link}
-            </Button>
-          ))}
-        </Box>
+          <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
+            <svg
+              fill="white"
+              width="12px"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </Box>
+
+          <Box
+            display={{ base: show ? "block" : "none", md: "flex" }}
+            width={{ base: "full", md: "auto" }}
+            px={20}
+            alignItems="center"
+          >
+            {links.map((link, i) => (
+              <Button
+                key={i}
+                color={isActive === i ? "purple.600" : ""}
+                onClick={() => handleActive(i)}
+                mt={{ base: 6, md: 0 }}
+                mr={6}
+                display="block"
+              >
+                {link}
+              </Button>
+            ))}
+          </Box>
         </Flex>
-        <Button onClick={toggleColorMode}  variant="ghost">
+        <Button onClick={toggleColorMode} variant="ghost">
           {colorMode === "dark" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Flex>

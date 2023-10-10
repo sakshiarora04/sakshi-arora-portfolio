@@ -1,5 +1,5 @@
 // This is a static page mocking an "About Us" section for our fake user data
-import { Stack, Flex, Box, Text} from '@chakra-ui/layout';
+import { Stack, Flex, Box, Text,Link} from '@chakra-ui/layout';
 
 import { Button } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/image';
@@ -19,7 +19,7 @@ export default function AboutPage() {
                     I am passionate and dedicated Full Stack Developer with a relentless pursuit of crafting innovative web solutions.
                       </Text>
                     <Button mt={8} colorScheme="blue" onClick={() =>
-                        <a href='/contact'></a>
+                        <Link href='/contact'></Link>
                     }>Contact me</Button>
 
                 </Box>

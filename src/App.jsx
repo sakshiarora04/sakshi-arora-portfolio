@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Stack } from "@chakra-ui/layout";
 // //  import `ChakraProvider` component
-import { ChakraProvider} from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "./styles/theme.jsx";
 function App() {
   // The Outlet component will conditionally swap between the different pages according to the URL

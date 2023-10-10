@@ -9,10 +9,10 @@ Check out my responsive portfolio built with React. This website features mobile
 ## Table of Contents
 * [Live Demo](#live-demo)
 * [Installation](#installation)
-* [Usage](#usage)
-* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Technologies](#technologies)
 * [Credits](#credits)
-
+* [Contact Information](#contact-information)
 
 ## Live Demo
 

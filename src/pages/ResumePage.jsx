@@ -49,14 +49,17 @@ export default function ResumePage() {
     >
       {/* download resume button */}
       <GridItem bg="back.800" mb={10} overflowY="auto">
+        <a href={resume} download="sakshi_arora.pdf">
         <Button variant="solid" colorScheme="blue" m={10}>
-          <Link href={resume}>
+          
             <BsCloudDownloadFill
-              style={{ width: "100px", height: "20px", marginLeft: "30px" }}
-            />{" "}
+              style={{ margin:"20px", height: "20px" }}
+            />
             Download my resume
-          </Link>
+         
         </Button>
+        </a>
+        
         <p>Please feel free to check out my list of Developer Proficiencies!</p>
       </GridItem>
       {/* list frontend and backend Proficiencies */}

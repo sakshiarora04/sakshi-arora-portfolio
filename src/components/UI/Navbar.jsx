@@ -17,6 +17,7 @@ export default function Nav({ links }) {
   // set state to show light or dark
   const [isActive, setisActive] = useState(0);
   const { colorMode, toggleColorMode } = useColorMode();
+
   // set isActive to key value of clicked link
   const handleActive = (pageNo) => {
     setisActive(pageNo);

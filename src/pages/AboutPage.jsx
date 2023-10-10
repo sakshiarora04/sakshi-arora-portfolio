@@ -1,5 +1,5 @@
 // This is a static page mocking an "About Us" section for our fake user data
-import { Box, Text, Link,Grid,GridItem } from "@chakra-ui/layout";
+import { Box, Text,Grid,GridItem } from "@chakra-ui/layout";
 
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";

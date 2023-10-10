@@ -1,3 +1,4 @@
+// import required components
 import {
   Grid,
   Flex,
@@ -10,7 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { validateEmail } from "../utils/helpers";
+
 export default function ContactPage() {
+  // set state to empty all fields
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -21,17 +24,16 @@ export default function ContactPage() {
   const handleInput = (e) => {
     const type = e.target.name;
     const value = e.target.value;
-
+    // set value of selected field
     if (type === "email" || type === "name" || type === "message") {
       setFormState({ ...formState, [type]: value });
     }
   };
+
   const handleInputOnFocusOut = (e) => {
     const type = e.target.name;
     const value = e.target.value;
-
-    console.log(type, value, !validateEmail(value));
-
+    // check if field left empty and email is invalid and set errormessage
     if (type === "name" && !value) {
       setErrorMessage("Please enter name");
     } else if (type === "email" && !validateEmail(value)) {
@@ -42,15 +44,16 @@ export default function ContactPage() {
       setErrorMessage("");
     }
   };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    // if no error message then submit successfully
     if (!errorMessage) {
       console.log("submitted successfully", formState);
       setFormState({ name: "", email: "", message: "" });
     } else {
       setErrorMessage("Please enter required fields");
     }
-   
   };
 
   return (
@@ -64,10 +67,11 @@ export default function ContactPage() {
       <Flex width="auto" align="center" justifyContent="center">
         <Box p={2}>
           <Box textAlign="center">
-            <Heading>Contact Me</Heading><p className="feedback">I would love to hear your feedback</p>
+            <Heading>Contact Me</Heading>
+            <p className="feedback">I would love to hear your feedback</p>
           </Box>
           <Box my={4} w={[200, 300, 400]} textAlign="left">
-            <form className="form"  onSubmit={handleFormSubmit}>
+            <form className="form" onSubmit={handleFormSubmit}>
               <FormControl>
                 <FormLabel>Name:</FormLabel>
                 <Input
@@ -94,7 +98,7 @@ export default function ContactPage() {
                   value={formState.message}
                   onChange={handleInput}
                   onBlur={handleInputOnFocusOut}
-                  placeholder=""
+                  placeholder="Type your message here"
                 />
               </FormControl>
               <FormControl mt={6}>

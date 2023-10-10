@@ -1,8 +1,11 @@
+// import required components from chakra
 import { IconButton, Flex, Stack, ButtonGroup } from "@chakra-ui/react";
+// import icons from react
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
+    // display icons at footer and attach link
     <Flex as="footer" justify="center" height="50px">
       <Stack spacing={{ base: "4", md: "5" }}>
         <Stack justify="space-between" direction="row" align="center">

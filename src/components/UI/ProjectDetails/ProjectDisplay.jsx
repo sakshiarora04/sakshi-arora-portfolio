@@ -1,3 +1,4 @@
+// import required components from chakra
 import {
   GridItem,
   Stack,
@@ -12,13 +13,13 @@ import {
   CardFooter,
   Card,
 } from "@chakra-ui/react";
-
+// get passed data (one project object from array of projects) with component ProjectDisplay and display that data on chakra cards
 export default function ProjectDisplay({
   project: { title, image, description, deploy, github },
 }) {
   return (
     <GridItem bg="back.800" mb={10} overflowY="auto">
-      <Card maxW="sm" w="500" >
+      <Card maxW="sm" w="500">
         <CardBody>
           <Image
             src={image}
@@ -34,6 +35,7 @@ export default function ProjectDisplay({
         </CardBody>
         <Divider />
         <CardFooter>
+          {/* button to give links to repo and deployed site */}
           <ButtonGroup spacing="2">
             <Button variant="solid" colorScheme="blue">
               <Link href={deploy}>Live</Link>

@@ -9,10 +9,12 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
+// import download icon
 import { BsCloudDownloadFill } from "react-icons/bs";
 import resume from "/assets/resume/SAKSHI_ARORA_Resume.pdf";
 
 export default function ResumePage() {
+  // skill set
     const frontEndSkills = [
         "CSS",
         "JavaScript",
@@ -45,6 +47,7 @@ export default function ResumePage() {
       my={40}
       mx={20}
     >
+      {/* download resume button */}
       <GridItem bg="back.800" mb={10} overflowY="auto">
         <Button variant="solid" colorScheme="blue" m={10}>
           <Link href={resume}>
@@ -56,8 +59,9 @@ export default function ResumePage() {
         </Button>
         <p>Please feel free to check out my list of Developer Proficiencies!</p>
       </GridItem>
+      {/* list frontend and backend Proficiencies */}
       <GridItem bg="back.800" mb={10} overflowY="auto">
-        <Card maxW="sm" w="500" h="350">
+        <Card maxW="sm" w="500" h="380">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Front-end Proficiencies</CardHeader>
           <CardBody>
             <UnorderedList>
@@ -69,7 +73,7 @@ export default function ResumePage() {
         </Card>
       </GridItem>
       <GridItem bg="back.800" mb={10} overflowY="auto">
-        <Card maxW="sm" w="500" h="350">
+        <Card maxW="sm" w="500" h="380">
           <CardHeader fontWeight="bold" fontSize="1.5rem">Back-end Proficiencies</CardHeader>
           <CardBody><UnorderedList>
               {backEndSkills.map((skill, i) => (

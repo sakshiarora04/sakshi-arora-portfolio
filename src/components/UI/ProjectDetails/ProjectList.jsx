@@ -2,6 +2,14 @@ export default function ProjectList() {
   // list of all projects
   const allProjects = [
     {
+      title: "Spark Shopper",
+      image: "./assets/images/spark.jpg",
+      description:
+        " This e-commerce project is designed to create a robust online shopping platform. It provides a feature-rich environment for customers to browse, search for, and purchase products. Additionally, it offers administrative tools for managing products, orders, and customers.Easy Registration, Efficient Search, Quick Cart Additions Swift Check Out. Share Your Thoughts. Manage Your Wishlist.",
+      deploy: "https://spark-shopper-c35a92bbd283.herokuapp.com/",
+      github: "https://github.com/Tristenh/spark-shopper",
+    },
+    {
       title: "Your Recipe Book",
       image: "./assets/images/recipe.jpg",
       description:
@@ -41,14 +49,7 @@ export default function ProjectList() {
       deploy: "https://sakshiarora04.github.io/Work-Day/ ",
       github: "https://github.com/sakshiarora04/Work-Day",
     },
-    {
-      title: "Code Quiz",
-      image: "./assets/images/quiz.jpg",
-      description:
-        "An application includes multiple-choice questions and timer. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code. It has a clean and polished, responsive user interface that adapts to multiple screen sizes.",
-      deploy: "https://sakshiarora04.github.io/quiz/ ",
-      github: "https://github.com/sakshiarora04/quiz",
-    },
+   
   ];
   return allProjects;
 }

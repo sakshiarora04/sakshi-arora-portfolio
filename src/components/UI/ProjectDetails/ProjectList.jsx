@@ -5,7 +5,7 @@ export default function ProjectList() {
       title: "Spark Shopper",
       image: "./assets/images/spark.jpg",
       description:
-        " This e-commerce project is designed to create a robust online shopping platform. It provides a feature-rich environment for customers to browse, search for, and purchase products. Additionally, it offers administrative tools for managing products, orders, and customers.Easy Registration, Efficient Search, Quick Cart Additions Swift Check Out. Share Your Thoughts. Manage Your Wishlist.",
+        " It provides a feature-rich environment for customers to browse, search for, and purchase products. Additionally, it offers Easy Registration, Share Your Thoughts, Manage Your Wishlist.",
       deploy: "https://spark-shopper-c35a92bbd283.herokuapp.com/",
       github: "https://github.com/Tristenh/spark-shopper",
     },

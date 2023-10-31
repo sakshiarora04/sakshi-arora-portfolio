@@ -5,7 +5,7 @@ export default function ProjectList() {
       title: "Spark Shopper",
       image: "./assets/images/spark.jpg",
       description:
-        " It provides a feature-rich environment for customers to browse, search for, and purchase products. Additionally, it offers Easy Registration, Share Your Thoughts, Manage Your Wishlist.",
+        " It provides a feature-rich environment for customers to browse, search for, and purchase products. Additionally, it offers Easy Registration, Quick Cart Additions, Share Your Thoughts. Manage Your Wishlist.",
       deploy: "https://spark-shopper-c35a92bbd283.herokuapp.com/",
       github: "https://github.com/Tristenh/spark-shopper",
     },

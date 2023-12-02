@@ -9,10 +9,12 @@ import {
   Button,
   FormLabel,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { validateEmail } from "../utils/helpers";
 
 export default function ContactPage() {
+  const form = useRef();
   // set state to empty all fields
   const [formState, setFormState] = useState({
     name: "",
@@ -47,8 +49,25 @@ export default function ContactPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_bp3hoor",
+        "template_7kwqxyx",
+        form.current,
+        "6actgrNzAA-y9pHbP"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
     // if no error message then submit successfully
     if (!errorMessage) {
+      setErrorMessage("Thank you for your feedback");
       console.log("submitted successfully", formState);
       setFormState({ name: "", email: "", message: "" });
     } else {
@@ -71,7 +90,12 @@ export default function ContactPage() {
             <p className="feedback">I would love to hear your feedback</p>
           </Box>
           <Box my={4} w={[200, 300, 400]} textAlign="left">
-            <form className="form" onSubmit={handleFormSubmit}>
+            <form
+            ref={form}
+              action="https://formsubmit.co/your@.com"
+              className="form"
+              onSubmit={handleFormSubmit}
+            >
               <FormControl>
                 <FormLabel>Name:</FormLabel>
                 <Input

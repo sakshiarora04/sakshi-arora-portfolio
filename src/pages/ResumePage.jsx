@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 // import download icon
 import { BsCloudDownloadFill } from "react-icons/bs";
-import resume from "/assets/resume/SAKSHIARORA-Resume.pdf";
+import resume from "/assets/resume/SAKSHI ARORA-Resume.pdf";
 
 export default function ResumePage() {
   // skill set
